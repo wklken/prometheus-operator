@@ -507,6 +507,7 @@ ThanosSpec defines parameters for a Prometheus server within a Thanos deployment
 | Field | Description | Scheme | Required |
 | ----- | ----------- | ------ | -------- |
 | peers | Peers is a DNS name for Thanos to discover peers through. | *string | false |
+| secretKey | SecretKey is to encrypt cluster gossip. | *string | false |
 | version | Version describes the version of Thanos to use. | *string | false |
 | tag | Tag of Thanos sidecar container image to be deployed. Defaults to the value of `version`. Version is ignored if Tag is set. | *string | false |
 | sha | SHA of Thanos container image to be deployed. Defaults to the value of `version`. Similar to a tag, but the SHA explicitly deploys an immutable container image. Version and Tag are ignored if SHA is set. | *string | false |

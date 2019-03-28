@@ -249,6 +249,9 @@ type ThanosSpec struct {
 	// Peers is a DNS name for Thanos to discover peers through.
 	Peers *string `json:"peers,omitempty"`
 
+	// SecretKey is to encrypt cluster gossip
+	SecretKey *string `json:"secretKey,omitempty"`
+
 	// ClusterAdvertisePort is the port of advertise address for gossip in gossip cluster
 	ClusterAdvertisePort int32 `json:"clusterAdvertisePort,omitempty"`
 	// GRPCAdvertisePort is the port of advertise address for gRPC StoreAPI in gossip cluster

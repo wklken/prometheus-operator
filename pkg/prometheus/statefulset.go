@@ -611,6 +611,9 @@ func makeStatefulSetSpec(p monitoringv1.Prometheus, c *Config, ruleConfigMapName
 		if p.Spec.Thanos.Peers != nil {
 			thanosArgs = append(thanosArgs, fmt.Sprintf("--cluster.peers=%s", *p.Spec.Thanos.Peers))
 		}
+		if p.Spec.Thanos.SecretKey != nil {
+			thanosArgs = append(thanosArgs, fmt.Sprintf("--cluster.secret-key=%s", *p.Spec.Thanos.SecretKey))
+		}
 		if p.Spec.Thanos.ClusterAdvertisePort != 0 {
 			thanosArgs = append(thanosArgs, fmt.Sprintf("--cluster.advertise-address=$(NODE_IP):%d", p.Spec.Thanos.ClusterAdvertisePort))
 		}

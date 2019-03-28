@@ -2300,6 +2300,13 @@ func schema_pkg_client_monitoring_v1_ThanosSpec(ref common.ReferenceCallback) co
 							Format:      "",
 						},
 					},
+					"secretKey": {
+						SchemaProps: spec.SchemaProps{
+							Description: "SecretKey is to encrypt cluster gossip.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
 					"clusterAdvertisePort": {
 						SchemaProps: spec.SchemaProps{
 							Description: "ClusterAdvertisePort is the port of advertise address for gossip in gossip cluster",
